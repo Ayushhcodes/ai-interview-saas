@@ -52,10 +52,19 @@ Currently:
 [ User Request ] 
        │
        ▼
- 1. ROUTES ────► (The server looks at the URL path)
+ 1. ROUTES ────► (The server looks at the URL path basically route tell when this action in frontend happens send to which controller am i right)
        │
        ▼
  2. MIDDLEWARES ──► (The security guard checks: Is the user logged in?)
        │
        ▼
  3. CONTROLLERS ──► (The brain does the heavy work / talks to AI)
+ 
+Controller contains the actual logic of an action.
+
+Google Login Controller:
+- Gets user data from frontend.
+- Checks or creates the user in MongoDB.
+- Generates JWT token.
+- Stores token in cookies.
+- Sends response to frontend.

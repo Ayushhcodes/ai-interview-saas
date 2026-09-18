@@ -2,11 +2,19 @@ import { RiRobot2Fill } from "react-icons/ri";
 import { IoSparklesSharp } from "react-icons/io5";
 import { motion } from "motion/react"
 import { FcGoogle } from "react-icons/fc";
+import { signInWithPopup } from "firebase/auth";
+import { auth, provider } from "../utils/firebase";
+function Auth() {
 
-
-
-
-const Auth = () => {
+    const handleGoogleAuth = async() => {
+        try {
+            const response = await signInWithPopup( auth, provider)
+            console.log(response)
+        } catch (error) {
+            console.log(error)
+        }
+    }
+    
   return (
     
     <motion.div
@@ -33,6 +41,7 @@ const Auth = () => {
             </p>
 
             <motion.button
+            onClick={handleGoogleAuth}
             whileHover={{opacity:0.9, scale:1.03}}
             whileTap={{opacity:1, scale:0.98}}
             className="w-full flex items-center justify-center gap-3 py-3 bg-black text-white rounded-full shadow-md">
@@ -44,6 +53,7 @@ const Auth = () => {
     </motion.div>
   )
 }
+
 
 export default Auth
 
