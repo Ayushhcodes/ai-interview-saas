@@ -9,6 +9,9 @@ function Auth() {
     const handleGoogleAuth = async() => {
         try {
             const response = await signInWithPopup( auth, provider)
+
+        
+
             console.log(response)
         } catch (error) {
             console.log(error)
