@@ -124,3 +124,45 @@ Frontend (`App.jsx`)
 - `cookieParser()` → Reads browser cookies.
 - `ServerUrl` → Backend URL used by the frontend.
 - `credentials: true` → Enables cookie-based cross-origin requests.
+
+1. App.jsx
+   ↓
+2. Auth.jsx
+   ↓
+3. Firebase Google Popup
+   ↓
+4. Firebase ID Token Generated
+   ↓
+5. Frontend Sends ID Token to Backend
+   ↓
+6. ServerUrl → http://localhost:5000
+   ↓
+7. Backend index.js Receives Request
+   ↓
+8. index.js → auth.route.js
+   ↓
+9. auth.route.js → auth.controller.js
+   ↓
+10. auth.controller.js Verifies Firebase ID Token
+   ↓
+11. Gets Verified User Details
+   ↓
+12. Creates / Finds User in MongoDB
+   ↓
+13. token.js Generates Your JWT
+   ↓
+14. JWT Stored in Cookie
+   ↓
+15. Response Sent Back to Frontend
+
+
+How we built
+1. token.js
+   ↓
+2. auth.controller.js
+   ↓
+3. auth.route.js
+   ↓
+4. index.js
+   ↓
+5. App.jsx / Auth.jsx

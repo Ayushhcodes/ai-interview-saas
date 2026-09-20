@@ -1,4 +1,4 @@
-import genToken from "../config/token"
+import genToken from "../config/token.js"
 import User from "../models/user.model.js"
 
 //User = Model / Blueprint , user = Actual user document

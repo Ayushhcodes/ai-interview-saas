@@ -23,6 +23,6 @@
 7. Use the cookie to verify the user in future requests.
 
 ## IMPORTANT
-Google Login → Firebase ID Token → Backend verifies token
+Google Login → Firebase ID Token → Backend verifies token 
 → Gets verified user details → Creates/finds user
 → Generates JWT → Stores JWT in cookie
