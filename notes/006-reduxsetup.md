@@ -1,3 +1,5 @@
+Redux online setup can be viewed for setup
+
 ## Redux
 
 - Redux is used to manage shared frontend state.

@@ -7,9 +7,9 @@ const userSlice = createSlice({
         userData: null
     },
 
-    reducers: {
+    reducers: {                               // yeh initial state ko change karte h
         setUserData(state, action) {
-            state.userData = action.payload
+            state.userData = action.payload   
         }
     }
 })
